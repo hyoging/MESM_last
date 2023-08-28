@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+   
+    a{
+        text-decoration-line: none;         /* 링크 밑줄 제거*/
+        color: white;
+    }
+      
+    button:hover{
+      color: rgb(173, 234, 196);
+    }
+   a:hover{
+      color: rgb(173, 234, 196);
+      
+   }
+   
+   div{
+    text-align: center;
+       margin-top: 10%;
+   }
+
+   .mainbutton { 
+    position: sticky ;
+    width: 368px;
+    margin: 0;
+    margin-left: 730px;  /* header처럼 가운데 정렬 안될땐 이거 조절하기 */
+    
+   }
+
+
+   button {
+    background: none;
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+    background-color: #3a8532;
+    margin-left: 65px;
+    height: 50px;    /* padding 대신 height로 줌 padding 사용보다 heigth가 나음*/
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border: none;           /* 버튼 테두리 X */
+   }
+  
+   .joinbtn{
+    margin-top: 20px;
+   }
+
+
+    </style>
+</head>
+<body>
+    <div>
+    <header>
+        <h1>MESM</h1>
+    </header>
+    
+            <!-- 버튼 section -->
+            <div class="mainbutton">
+                <a href="/login"><button type="button">로그인</button></a>
+                <a href="/join_form" class="ab"><button class="joinbtn">회원가입</a></button>
+            </div>
+        </div>
+
+   
+</body>
+</html>

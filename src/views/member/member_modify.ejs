@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("../default/header.ejs") %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          font-family: 'Gamja Flower', cursive;
+        }
+        .tou{
+            margin-top: 20px; margin-left: 10px;
+        }
+        .tou:hover {
+            background-color: #2a712f7a;
+        }
+        h2{
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        .box{
+            position: absolute; height: 30%; width: 15%;
+            top: 30%; 
+            left: 43%;
+            background: oldlace;
+            border-radius: 5px;
+            border-radius: 30px;
+        }
+        .sub{
+            position: absolute; 
+            box-shadow: none; 
+            top: 62%;
+            left: 47%;
+            text-decoration: none;
+            height: 5%;
+            display: inline-block;
+            width: 8%;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            background-color: green;
+            color: white;
+        }
+        .sub:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; top: 10px;">
+        <p style="font-size: 30px;">마이페이지</p>
+        <div style="width: 190px;">
+            <div class="tou" style="font-size: 19px;"><a href="/member_info/<%= username %>">개인정보수정</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_plant/<%= username %>">내 식물 관리</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_board/<%= username %>">내 게시글 관리</a></div>
+        </div>
+    </div>
+    <div class="box">
+        <h2>수정 페이지</h2>
+        <hr>
+        <div style="padding: 5%; font-size: 22px;">
+            <form action="mem_modify" method="post">
+                아이디 &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;
+                <input type="text" readonly value="<%= member.ID %>" name="id"><br>
+                비밀번호 &nbsp;: &nbsp;&nbsp;
+                <input type="text" value="<%= member.PW %>" name="pw"><br>
+                이름 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;
+                <input type="text" value="<%= member.NAME %>" name="name"><br>
+            </div>
+        
+        </div>
+                <input class="sub" type="submit" value="수정">
+            </form>
+        
+</body>
+</html>

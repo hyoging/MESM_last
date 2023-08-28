@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+<title>Main</title>
+<%-include("../default/header.ejs") %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+  *{
+    font-family: 'Gamja Flower', cursive;
+  }
+  
+  a{
+    text-decoration-line:none;
+    text-decoration-color:black;
+    text-align: center;
+    text-decoration: none; 
+    color: inherit; 
+    
+  }
+  
+  .plant_box{
+    margin-top: 130px;
+    margin-left: 300px;
+  } 
+  
+  .photo_box{
+    width : 200px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 300px;
+    
+  }
+  
+  .info_box{
+    width: 400px;
+      height: 250px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      margin-left: 120px;
+      margin-bottom: 10px;
+      font-size: 25px;
+      text-align: center;
+      padding-top: 60px;
+      background-color: oldlace;
+      border-radius: 35px;
+  }
+  
+  .one_plant{
+    margin-left:160px
+  }
+
+.back{
+  margin-left: 1224px;
+  margin-top:30px
+}
+  
+  
+  
+  </style>
+</head>
+<body>
+
+  <div class="plant_box">  
+    <% result.forEach(r => {%>
+    <div class="photo_box"><img src="/img/<%= r.P_NAME %>.jpg" width="100%" height="100%"></div>
+    
+    <div class="info_box">
+      <%= r.P_NAME %><br>
+      <%= r.P_ENVIR %><br>
+      <%= r.P_WATER %><br>
+      <%= r.P_GROUP %><br>
+    </div>
+    <%})%>
+   
+</div>
+ <a href ="/plant_my" class="back">뒤로가기</a>
+</body>
+</html>

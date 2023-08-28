@@ -1,0 +1,31 @@
+<%-include("../default/header.ejs") %>
+<style>
+table {
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    padding-top:70px;
+}
+
+tr{
+    font-size: 20px;
+}
+</style>
+
+<table>
+    <tr>
+        <th>식물이름</th>
+    <% result.forEach((plant)=>{  %>
+    <tr>
+        <td><a onclick="location" href='./plant_show/<%= plant.P_NAME %>'><%= plant.P_NAME %></a></td> 
+        <td>
+                <img src="img/<%= plant.P_NAME %>.jpg" width="100px" height="100px">
+           
+        </td>
+    
+    </tr>  
+    <% }); %> 
+ 
+   
+</table>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+  <title>Main</title>
+<%-include("../default/header.ejs") %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+*{
+  font-family: 'Gamja Flower', cursive;
+}
+
+a{
+  text-decoration-line:none;
+  text-decoration-color:black;
+  text-align: center;
+  text-decoration: none; 
+  color: inherit; 
+  
+}
+
+.box{
+  padding-top: 100px;
+  padding: auto;
+  margin: auto;
+  width: 1300px;
+  height:600px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.b_text{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-family: 'Gamja Flower', cursive;
+}
+
+button {
+    background: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #ffffff;
+    height: 50px;    /* padding 대신 height로 줌 padding 사용보다 heigth가 나음*/
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border: none;           /* 버튼 테두리 X */
+    margin-left: 540px;
+    margin-top: 300px;
+   }
+
+   .search_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+}
+
+#name {
+    width: 500px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 0.1px lightgray;
+  }  
+
+.invisible{
+    display: none;
+}
+
+
+#suggestion_box {
+    margin-top: 1px;
+    background: white;
+    padding: 0 10px;
+    border: 1px solid black;
+}
+
+#suggested_items{
+    height:100px;
+    width: 250px;
+    overflow: auto; /* 스크롤바 추가 */
+}
+
+/* 마우스 올리면 색 변화 */
+.item:hover{
+    color: #fff;
+    background-color: lightgreen;
+}
+#submit_button {
+    /* background: none; */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 105px;
+    height: 35px;
+    font-size: 15px;
+    margin-left: 10px;
+   }
+   .regi{
+    background-color:oldlace;
+    border-radius: 30px;
+    
+   }
+
+   #search_bar{
+    width:300px;
+    height:30px;
+    font-size:17px;
+   }
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="box">
+  <div class="regi box">
+    <div class = "search_wrapper">
+        <div class = "mid_wrapper">
+          <form action = "/plant_reg_form" method="get">
+
+            <input type="text" id="search_bar" name= "p_name" autocomplete="on">
+            <!-- 검색버튼 -->
+          <input type ="submit" id = "submit_button" value="검색">
+         </form>
+
+        </div>
+      </div>
+
+  </div>
+</div>
+
+</body>
+</html>

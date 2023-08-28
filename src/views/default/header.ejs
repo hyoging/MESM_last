@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+<title>Main</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Gamja Flower', cursive;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the header */
+.header {
+  background-color: #ecffeb;
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 836px; 
+}
+
+.column.side {
+  width: 1920px;
+  height:20%
+}
+
+.form_title_p{
+    font-weight: bold; 
+    font-size: 50px; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    text-align: left;
+    margin-right: 1050px;
+    color:rgb(13, 181, 13);
+}
+
+.form_title_mypage{
+    font-weight: bold; 
+    font-size: 20px; 
+    /* display: inline-block;  */
+    text-align: right;
+    color:rgb(0, 0, 0);
+    /* padding-left: 1000px; */
+    padding-top: 50px;
+    padding-right: 10px;
+    
+}
+
+.form_title_logout{
+    font-weight: bold; 
+    font-size: 20px; 
+    /* display: inline-block;  */
+    text-align: right;
+    color:rgb(0, 0, 0);
+    padding-left: 500px;
+    padding-top: 50px;
+    
+}
+
+.column_p{
+    font-weight: bold; 
+    font-size: 20px; 
+    display: inline-block; 
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 8px;
+    text-decoration-line:none;
+    color:black;
+}
+
+a{
+  text-decoration-line:none;
+  text-decoration-color:black;
+  text-align: center;
+  text-decoration: none; 
+  color: inherit; 
+  
+}
+</style>
+
+
+
+<div class="header">
+  <!-- <img src="../../public/img/MESM.png" width="800px"> -->
+  <a href="/main"><p class="form_title_p">MESM</a>
+    <a href="/logout"><p class ="form_title_logout">로그아웃</p></a>
+    <a href="/mypage"><p class="form_title_mypage">마이페이지</p></a>
+    
+  </p>
+  
+</div>
+
+<div class="header">
+  <div class="column side" style="background-color: #2a712f7a;">
+    <a href="/board_list"> <p class="column_p"> 게시판</p></a>
+    <a href="/plant_my"> <p class="column_p"> 내 식물 보기</p></a>
+  </div>
+</div>

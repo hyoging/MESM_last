@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+    <%-include("../default/header.ejs") %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+        *{
+          font-family: 'Gamja Flower', cursive;
+        }
+    
+        .tou{
+            margin-top: 20px; margin-left: 10px;
+        }
+
+        .tou:hover {
+            background-color: #2a712f7a;
+            color:white;
+        }
+    
+        .hst{
+            position : absolute; text-decoration: none; color:black;
+            outline: none; left: 90%; top: 60%;
+        }
+
+
+        .boxtop{
+            padding-left: 25px; padding-top: 20px;
+        }
+
+        .box{
+            display: none;
+            position: absolute; height: 30%; width: 50%;
+            top: 22%; 
+            left: 28%;
+            background: oldlace;
+            border-radius: 5px;
+        }
+
+        .box2{
+            display: none;
+            position: absolute; height: 18%; width: 50%;
+            top: 22%; 
+            left: 28%;
+            background: oldlace;
+        }
+
+        .box3{
+            display: none;
+            position: absolute; height: 18%; width: 50%;
+            top: 22%; 
+            left: 28%;
+            background: oldlace;
+        }
+
+        .box4{
+            display: none;
+            position: absolute; height: 15%; width: 50%;
+            top: 22%; 
+            left: 28%;
+            background: oldlace;
+        }
+
+
+        .text{
+            padding-top: 15px; padding-left: 10px;
+            font-size: large;
+            margin-left: 10px;
+        }
+
+
+        .insBtn1{
+            display: none;
+            position: absolute;
+            box-shadow: none; 
+            border:  none;
+            border-radius: 20px;
+            background-color: #2a712f7a;
+            color: white;
+            height: 3%;
+            width: 8%;
+            top: 36%; 
+            left: 60%;
+        }
+
+        .delBtn1{
+            display: none;
+            position: absolute;
+            box-shadow: none; 
+            border:  none;
+            border-radius: 20px;
+            background-color: #2a712f7a;
+            color: white;
+            height: 3%;
+            width: 8%;
+            top: 36%; 
+            left: 69%;
+        }
+
+        .delBtn2{
+            display: none;
+            position: absolute;
+            box-shadow: none; 
+            border:  none;
+            border-radius: 20px;
+            background-color: #2a712f7a;
+            color: white;
+            height: 3%; 
+            width: 8%;
+            top: 36%; 
+            left: 69%;
+        }
+
+        .delBtn3{
+            display: none;
+            position: absolute;
+            box-shadow: none; 
+            border:  none;
+            border-radius: 20px;
+            background-color: green;
+            color: white;
+            height: 5%; 
+            width: 50%; 
+            left: 28%;
+        }
+
+        .delBtn3:hover{
+            background-color:red;
+        }
+
+        .modify{
+            position: relative; 
+            box-shadow: none; 
+            top: 16%; 
+            text-decoration: none;
+            height: 50px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            background-color: #2a712f7a;
+            font-size: 15px;
+            color: white;
+            margin-left: 110px;
+}
+
+#pwenter{
+    width: 350px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+        
+
+
+    </style>
+</head>
+<body>
+    <div style="position: relative; top: 10px;">
+        <p style="font-size: 30px;">마이페이지</p>
+        <div style="width: 190px;">
+            <div class="tou" style="font-size: 19px;"><a href="/member_info/<%= username %>">개인정보수정</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_plant/<%= username %>">내 식물 관리</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_board/<%= username %>">내 게시글 관리</a></div>
+        </div>
+    </div>
+</body>
+</html>

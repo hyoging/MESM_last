@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+<title>Main</title>
+<%-include("../default/header.ejs") %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *{
+    font-family: 'Gamja Flower', cursive;
+    
+  }
+
+a{
+  text-decoration-line:none;
+  text-decoration-color:black;
+  text-align: center;
+  text-decoration: none; 
+  color: inherit; 
+  
+}
+
+.box{
+  padding-top: 100px;
+  padding: auto;
+  margin: auto;
+  width: 1300px;
+  height:600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.b_text{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-family: 'Gamja Flower', cursive;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: green;
+    height: 50px;    /* padding 대신 height로 줌 padding 사용보다 heigth가 나음*/
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    border: none;           /* 버튼 테두리 X */
+    border-radius: 20px;
+    font-size: 15px;
+
+    /* padding: auto;
+    margin: auto; */   
+    
+    top: 75%;
+   }
+   button:hover {
+    background-color: red;
+   }
+   .regi{
+    background-color:#efeadc;
+    border-radius: 30px;
+    margin-top: -54px;
+   }
+   .box2{
+    position: absolute;
+    background-color: #ffffff;
+    height: 45%;
+    width: 24%;
+    border-radius: 30px;
+    top: 25%;
+    left: 38%;
+   }
+   h3{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+   }
+   .texts{
+    font-size: 24px;
+    padding-top: 3%;
+    padding-left: 5%;
+   }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="regi box">
+            <div class="box2">
+                <h3>게시글 보기</h3>
+                <hr>
+                <div class="texts">
+                    글 번호 : <%=data.POST_NUM %><br>
+                    제목 : <%=data.TITLE %><br>
+                    내용: <%=data.CONTENT %><br>
+                    작성일 : <%=data.REGDATE %><br>
+                    조회수 : <%=data.COUNT %><br>
+                    작성자 : <%=data.ID %><br>
+                </div>
+            </div>
+            <a href="/board_list"><button style="position: absolute; left: 30%;">목록이동</button></a>
+                <a href="/modify_form/<%=data.POST_NUM %>"><button style="position: absolute; left: 45%;">수정</button></a>
+                <a href="/board_delete/<%= data.POST_NUM %>"><button style="position: absolute; left: 60%;">삭제</button></a>
+        </div>
+    </div>
+</body>
+</html>

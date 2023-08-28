@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+<title>Main</title>
+<%-include("./default/header.ejs") %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *{
+    font-family: 'Gamja Flower', cursive;
+    
+  }
+
+a{
+  text-decoration-line:none;
+  text-decoration-color:black;
+  text-align: center;
+  text-decoration: none; 
+  color: inherit; 
+  
+}
+
+.box{
+  padding-top: 100px;
+  padding: auto;
+  margin: auto;
+  width: 1300px;
+  height:600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.b_text{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-family: 'Gamja Flower', cursive;
+}
+
+button {
+    background: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #ffffff;
+    height: 50px;    /* padding 대신 height로 줌 padding 사용보다 heigth가 나음*/
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border: none;           /* 버튼 테두리 X */
+    border-radius: 20px;
+    font-size: 15px;
+
+    /* padding: auto;
+    margin: auto; */   
+    
+    
+    margin-left: 540px;
+    margin-top: 300px;
+   }
+   .regi{
+    background-color:oldlace;
+    border-radius: 30px;
+   }
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+  <div class="regi box">
+    <p class="b_text">식물을 등록하세요</p>
+    <a href="/plant_search"><button class="register_button">등록하기</button></a>
+    
+
+  </div>
+</div>
+
+</body>
+</html>

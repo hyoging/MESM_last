@@ -1,0 +1,55 @@
+<%-include("../default/header.ejs") %>
+  
+<style>
+    /* table, th, td {
+        border: 1px solid #bcbcbc;
+    } */
+    table {
+        width: 600px;
+        height: 200px;
+        text-align: center;
+        margin: auto;
+        padding-top:70px;
+    }
+
+
+    button{
+        color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #2a712f7a;
+    border: none;
+    border-radius: 20px;
+    width: 105px;
+    height: 35px;
+    font-size: 15px;
+    margin-left: 10px;
+    }
+
+   
+
+</style>
+
+
+    <table>
+        <th>식물이름</th> <th>이미지</th>
+        
+        <% search.forEach((plant)=>{  %>
+        <tr>
+            <td><%= plant.P_NAME %></td>            
+            <td>
+                <img src="img/<%= plant.P_NAME %>.jpg" width="200px" height="200px">   
+            </td>
+            <td class="submit">
+                <form action="main" method="post">
+                    <button type="submit" name="p_name" value="<%= plant.P_NAME %>">등록</button>
+                </form>
+            </td>
+        </tr>  
+        <% }); %> 
+    </table>
+     
+
+
+
+
+

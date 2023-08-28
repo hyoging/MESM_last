@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <style>
+        .main_container{
+    border: 0px solid;
+}
+
+.login_container{
+    width: 380px; 
+    height: 520px; 
+    margin: auto; 
+    border-radius: 3px; 
+    box-shadow: 0px 0px 20px #000;
+}
+
+.form_container{
+    width: 300px;
+    margin: auto;
+}
+
+.form_title_div{
+    margin: auto; 
+    text-align: center;
+}
+
+.form_title_p{
+    font-weight: bold; 
+    font-size: 22px; 
+    display: inline-block; 
+    padding-top: 8px;
+}
+
+.form_input{
+    width: 98%; 
+    height: 30px; 
+    border: 1px solid; 
+    border-radius: 3px; 
+    border-color: gray;
+}
+
+.form_item_name{
+    color: gray;
+}
+
+.form_text_alert{
+    height: 20px;
+}
+
+.form_text_alert_padding{
+    padding-bottom: 10px;
+}
+
+.form_submit_button{
+    width: 100%; 
+    height: 44px; 
+    background-color: #3a8532; 
+    border: 1px; 
+    border-radius: 3px; 
+    color: white; 
+    font-size: 17px; 
+    font-weight: 500;
+}
+    </style>
+    
+</head>
+<body>
+    <div id="container" class="main_container">
+        <div style="padding: 20px;"></div>
+        <div class="login_container">
+            <div class="form_container">
+                <form action="login_check" method="post">
+                    <div class="form_title_div">
+                        <p class="form_title_p">MESM</p>
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <a class="form_item_name">id</a>
+                        </div>
+                        <div>
+                            <input type="text" name="id" placeholder="id" class="form_input"/>
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_email" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">Password</a>
+                        </div>
+                        <div>
+                            <input type="password" name="pwd" placeholder="Enter password" class="form_input" />
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                       
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password2" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div style="height: 10px;"></div>
+                    <div>
+                        <button type="submit" class="form_submit_button">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

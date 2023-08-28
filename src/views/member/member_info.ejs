@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("../default/header.ejs") %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          font-family: 'Gamja Flower', cursive;
+        }
+        .tou{
+            margin-top: 20px; margin-left: 10px;
+        }
+        .tou:hover {
+            background-color: #2a712f7a;
+        }
+        h2{
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        .box{
+            position: absolute; height: 30%; width: 15%;
+            top: 30%; 
+            left: 43%;
+            background: oldlace;
+            border-radius: 5px;
+            border-radius: 30px;
+        }
+        .modify{
+            position: absolute; 
+            box-shadow: none; 
+            top: 16%; 
+            text-decoration: none;
+            height: 5%;
+            display: inline-block;
+            width: 6%;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            background-color: green;
+            color: white;
+            margin-left: 110px;
+        }
+        .modify:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; top: 10px;">
+        <p style="font-size: 30px;">마이페이지</p>
+        <div style="width: 190px;">
+            <div class="tou" style="font-size: 19px;"><a href="/member_info/<%= username %>">개인정보수정</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_plant/<%= username %>">내 식물 관리</a></div>
+            <div class="tou" style="font-size: 19px;"><a href="/mypage_board/<%= username %>">내 게시글 관리</a></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2> 개인정보 </h2>
+        <hr>
+        <div style="font-size: 24px; padding-top: 3%;padding-left: 3%;">
+            id: <%= member.ID %> <br>
+            pw: <%= member.PW %> <br>
+            name: <%= member.NAME %> <br>
+        </div>
+    </div>
+<a href="/member_modify?id=<%= member.ID %>">
+    <button class="modify" style="top: 62%; left: 38%;">수정</button>
+</a>
+
+<a href="/mypage">
+    <button class="modify" style="top: 62%; left: 46%;">뒤로 가기</button>
+</a>
+</body>
+</html>

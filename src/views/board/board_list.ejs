@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <title>글 리스트</title>
+    <%-include("../default/header.ejs") %>
+        <style>
+            * {
+                box-sizing: border-box;
+
+                margin: 0;
+                padding: 0;
+                font-family: 'Gamja Flower', cursive;
+
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration-line: none;
+                text-decoration-color: black;
+                text-align: center;
+                text-decoration: none;
+                color: inherit;
+
+            }
+
+            .box {
+                visibility: visible;
+                position: absolute;
+                height: 75%;
+                width: 60%;
+                top: 18%;
+                left: 28%;
+                border-radius: 35px;
+                background: oldlace;
+                margin-left: -182px;
+            }
+
+            .btnWriter {
+                position: absolute;
+                left: 90%;
+                top: 18%;
+                background-color: rgb(230, 230, 230);
+                width: 80px;
+                height: 30px;
+                margin-left: -140px;
+                width: 105px;
+                height: 35px;
+                border-radius: 10px;
+                background: green;
+                color: white;
+                font-size: 15px;
+                border: none;
+
+            }
+
+            table {
+                border-spacing: 50px;
+                border-collapse: separate;
+                text-align: center;
+                margin-left: 200px;
+            }
+
+            table td {
+                width: 120px;
+                font-size: 25px;
+                text-align: center;
+
+            }
+
+            table tr{
+                font-size: 25px;
+            }
+
+        </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+
+
+        <table>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>등록날짜</th>
+                <th>작성자</th>
+            </tr>
+            <% data.forEach( data=> { %>
+                <tr>
+
+                    <td>
+                        <%= data.POST_NUM %>
+                    </td>
+                    <td><a href="/content/<%=data.POST_NUM%>">
+                            <%= data.TITLE %>
+                        </a></td>
+                    <td>
+                        <%= data.REGDATE %>
+                    </td>
+                    <td>
+                        <%= data.ID %>
+                    </td>
+                </tr> 
+                <% }); if( data.length==0 ){%>
+                    
+                       <script> alert('등록된 정보가 없습니다.');location.href="/insert_form";</script>
+                   
+                    <%} %>
+</table>
+       
+    </div>
+    <a href="/insert_form"> <button class="btnWriter" onclick="">글작성</button></a>
+</body>
+
+</html>
